@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --background: #f1f1e3;
+  --text: #000;
+  --secondary: #7FCBDE;
+  --secondaryTransparent: #7fcbde77;
+  --thirty: #005079;
+  --thirtyTransparent: #00517971;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik";
+  font-optical-sizing: auto;
+}
