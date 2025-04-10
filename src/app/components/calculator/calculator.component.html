@@ -1,0 +1,44 @@
+<a routerLink="/" class="back-link">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left">
+    <path d="m12 19-7-7 7-7" />
+    <path d="M19 12H5" />
+  </svg>
+  Back to Tools
+</a>
+
+<div class="card calculator-card">
+  <div class="card-header">
+    <h2>Basic Calculator</h2>
+    <p>Perform basic arithmetic operations</p>
+  </div>
+  <div class="card-content">
+    <div class="calculator">
+      <input type="text" [value]="display" readonly class="calculator-display">
+      <div class="calculator-buttons">
+        <button class="calc-btn" (click)="clearDisplay()">C</button>
+        <button class="calc-btn" (click)="backspace()">←</button>
+        <button class="calc-btn" (click)="handleOperator('%')">%</button>
+        <button class="calc-btn" (click)="handleOperator('/')">/</button>
+
+        <button class="calc-btn" (click)="inputDigit('7')">7</button>
+        <button class="calc-btn" (click)="inputDigit('8')">8</button>
+        <button class="calc-btn" (click)="inputDigit('9')">9</button>
+        <button class="calc-btn" (click)="handleOperator('*')">×</button>
+
+        <button class="calc-btn" (click)="inputDigit('4')">4</button>
+        <button class="calc-btn" (click)="inputDigit('5')">5</button>
+        <button class="calc-btn" (click)="inputDigit('6')">6</button>
+        <button class="calc-btn" (click)="handleOperator('-')">-</button>
+
+        <button class="calc-btn" (click)="inputDigit('1')">1</button>
+        <button class="calc-btn" (click)="inputDigit('2')">2</button>
+        <button class="calc-btn" (click)="inputDigit('3')">3</button>
+        <button class="calc-btn" (click)="handleOperator('+')">+</button>
+
+        <button class="calc-btn zero-btn" (click)="inputDigit('0')">0</button>
+        <button class="calc-btn" (click)="inputDecimal()">.</button>
+        <button class="calc-btn equals-btn" (click)="calculateResult()">=</button>
+      </div>
+    </div>
+  </div>
+</div>

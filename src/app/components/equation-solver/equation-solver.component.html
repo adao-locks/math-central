@@ -1,0 +1,54 @@
+<a routerLink="/" class="back-link">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left">
+    <path d="m12 19-7-7 7-7" />
+    <path d="M19 12H5" />
+  </svg>
+  Back to Tools
+</a>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Equation Solver</h2>
+    <p>Solve linear and quadratic equations</p>
+  </div>
+  <div class="card-content">
+    <div class="tabs">
+      <div class="tab-list">
+        <button class="tab-button" [class.active]="activeTab === 'linear'" (click)="setActiveTab('linear')">Linear Equation</button>
+        <button class="tab-button" [class.active]="activeTab === 'quadratic'" (click)="setActiveTab('quadratic')">Quadratic Equation</button>
+      </div>
+
+      <div class="tab-content" [class.active]="activeTab === 'linear'">
+        <div class="equation-input">
+          <input type="number" [(ngModel)]="linearA" class="equation-coef">
+          <span>x +</span>
+          <input type="number" [(ngModel)]="linearB" class="equation-coef">
+          <span>= 0</span>
+        </div>
+
+        <button (click)="solveLinear()" class="button">Solve</button>
+
+        <div *ngIf="showLinearSolution" class="solution-box">
+          <p class="solution-text">{{ linearSolution }}</p>
+        </div>
+      </div>
+
+      <div class="tab-content" [class.active]="activeTab === 'quadratic'">
+        <div class="equation-input">
+          <input type="number" [(ngModel)]="quadraticA" class="equation-coef">
+          <span>x² +</span>
+          <input type="number" [(ngModel)]="quadraticB" class="equation-coef">
+          <span>x +</span>
+          <input type="number" [(ngModel)]="quadraticC" class="equation-coef">
+          <span>= 0</span>
+        </div>
+
+        <button (click)="solveQuadratic()" class="button">Solve</button>
+
+        <div *ngIf="showQuadraticSolution" class="solution-box">
+          <p class="solution-text">{{ quadraticSolution }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

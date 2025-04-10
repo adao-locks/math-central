@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuComponent } from './menu.component';
+import { EquationSolverComponent } from './equation-solver.component';
 
-describe('MenuComponent', () => {
-  let component: MenuComponent;
-  let fixture: ComponentFixture<MenuComponent>;
+describe('EquationSolverComponent', () => {
+  let component: EquationSolverComponent;
+  let fixture: ComponentFixture<EquationSolverComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuComponent]
+      declarations: [EquationSolverComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MenuComponent);
+    fixture = TestBed.createComponent(EquationSolverComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "math-central2": {
+    "math-central": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/math-central2",
+            "outputPath": "dist/math-central",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "math-central2:build:production"
+              "buildTarget": "math-central:build:production"
             },
             "development": {
-              "buildTarget": "math-central2:build:development"
+              "buildTarget": "math-central:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "06842095-9b12-4118-b7a1-a67bd66968a3"
+    "analytics": "f8b087fd-40af-4187-8cdd-3188c6b2d922"
   }
 }
